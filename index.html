@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flipkart | Tagging/Notes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <div class="content-wrapper" style="margin-left:0 !important;">
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Input Data For Notes</h3>
+                                </div>
+                                <form>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="cx_name">Cx name </label>
+                                            <input name="cx_name" type="text" class="form-control" id="cx_name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cx_number">Cx number</label>
+                                            <input name="cx_number" type="text" class="form-control mobile" id="cx_number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cx_alt_number">Cx alt number</label>
+                                            <input name="cx_alt_number" type="text" class="form-control mobile" id="cx_alt_number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="issue_cx_told">Issue: cx told</label>
+                                            <select name="issue_cx_told" class="form-control" id="issue_cx_told">
+                                                
+
+                                                <!--[if you want change the value create new option tag as mention bellow]-->
+                                                
+
+                                                <option value="">--select--</option>
+                                                <option value="wants to know order status">STATUS CHECK</option>
+                                                <option value="facing (ISSUE  Item not as described) ,cx wants  to return">RETURN</option>
+                                                <option value="wants to know order status, order status is out for delivery">OUT FOR DELIVERY</option>
+                                                <option value="wants to know order status, order status is shipped, CPD (TODAY)">CPD TODAY</option>
+                                                <option value="wants to know the reason for re-promise date for his order">REASON OF REPROMISE (CPD REVISED)</option>
+                                                <option value="need wishmaster details (delivery, ecom, shadowfax, xpressbees)">WISHMASTER DETAILS NOT AVAILABLE(3rd party logistic)</option>
+                                                <option value="need wish master details">WISHMASTER DETAILS (EKART)</option>
+                                                <option value="wants priority delivery">PRIORITY DELIVERY</option>
+                                                <option value="cx told that some products are not available at his area pin code, its showing `currently out of stock` checked in product page, showing the same">SERVICEABILITY</option>
+                                                <option value="when installation will happen?">INSTALLATION (SERVICE TAB GENERATED)</option>
+                                                <option value="when installation will happen?">INSTALLATION (SERVICE TAB NOT GENERATED) INSTALLATION NOT REQUIRED</option>
+                                                <option value="when installation will happen?">INSTALLATION (PRODUCT IS OUT FOR DELIVERY)</option>
+                                                <option value="wants to know the refund status">REFUND COMPLETED</option>
+                                                <option value="as discussed">REFUND FAILED</option>
+                                                <option value="that return rejected">RETURN REJECTION REASON(TNS RVP FRAUD)</option>
+                                                <option value="that amount debited but payment change not confirmed, (payment change is awaited from the courier)">COD TO PREPAID CONVERSION PAYMENT AWAITED</option>
+                                                <option value="that the amount was debited from the account, but the payment status has not been updated">PAYMENT REJECTED</option>
+                                                <option value="that the amount was debited from the account, but the payment status has not been updated">PAYMENT SUCCESSFUL</option>
+                                                <option value="wants to speak in language other than Hindi/English">LANGUAGE CALL BACK</option>
+                                                <option value="wants to know the reason of cancellation">CANCELATION</option>
+                                                <option value="wants to reinstate the cancelled order">REINSTATE</option>
+                                                <option value="facing (ISSUE) customer account is blocked, cx wants to unblock it">BLACKLISTED FROM UPDATE NOT AVAILABLE IN INCIDENT</option>
+                                                <option value="facing (ISSUE) customer account is blocked, cx wants to unblock it">BLACKLISTED FROM UPDATE AVAILABLE AND CX DISPUTES</option>
+                                                <option value="wants to know the cancellation reason">MP CANCELLATION</option>
+                                                <option value="there is NO RESPONSE FROM Customer side, CALL GOT DROPPED">BLANK CALL</option>
+                                                <option value="facing (issue) while talking cl got dropped, no resolution provided">CALL DROP</option>
+                                                <option value="2 CALLs GOT MERGED in a call, UNABLE TO HEAR CX VOICE properly, CALL got dropped">CALL MERGE</option>
+                                                <option value="wants to talk to the senior">ESCALATION</option>
+                                                <option value="that the amount is debited while trying to place an order, but he/she has not got any order confirmation">PAYMENT IS FAILED/DECLINED</option>
+                                                <option value="that the amount is debited while trying to place an order, but he/she has not got any order confirmation">PAYMENT IS SUCCESSFUL</option>
+                                                <option value="that the amount is debited while trying to place an order, but he/she has not got any order confirmation">PAYMENT IS AWAITING</option>
+                                                <option value="wants to know how to become plus member /renew plus membership">RENEW FLIPKART PLUS MEMBER</option>
+                                                <option value="wants to know about plus benefits">PLUS BENEFITS</option>
+                                                <option value="wants to know about VALIDITY OF SUPER COINS">VALIDITY OF SUPER COINS</option>
+                                                <option value="">---Adding More----</option>
+
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="resolution_cx_vo">Resolution CX VO</label>
+                                            <input name="resolution_cx_vo" type="text" class="form-control" id="resolution_cx_vo">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tat_sla">TAT/SLA</label>
+                                            <input name="tat_sla" type="text" class="form-control" id="tat_sla">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="csat_pitched">Csat pitched</label>
+                                            <select name="csat_pitched" class="form-control" id="csat_pitched">
+                                                <option value="">--select--</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="self_serv">Self-Serv</label>
+                                            <select name="self_serv" class="form-control" id="self_serv">
+                                                <option value="">--select--</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="reset" class="btn btn-secondary">Reset</button>
+                                        <button type="button" onclick="formSubmit();" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Copy the notes below</h3>
+                                </div>
+                                <div class="card-body" id="response">
+                                    <textarea class="form-control" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        
+    </div>
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script src="dist/js/adminlte.min.js"></script>
+    <script src="dist/js/demo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+    <script>
+        $(function () {
+            bsCustomFileInput.init();
+            // $(".mobile").keypress(function(e) {
+            //     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+            //         $(".errmsg").html("Digits Only").show().fadeOut("slow");
+            //         return false;
+            //     }
+            // });
+        });
+    </script>
+    <script>
+        function formSubmit() {
+            var html = '';
+
+            html = `Cx name: `+$('#cx_name').val()+`\nCx number: `+$('#cx_number').val()+`\n`;if ($('#cx_alt_number').val() != '') { html +=`Cx alt number: `+$('#cx_alt_number').val()+`\n`;} else {html += ``;}html +=`Issue: cx told `+$('#issue_cx_told').val()+`\nResolution: Checked and Informed `+$('#resolution_cx_vo').val()+`, TAT/SLA `+$('#tat_sla').val()+` shared.\nCsat pitched: `+$('#csat_pitched').val()+`\nSelf-Serv: `+$('#self_serv').val();
+
+            $('#response textarea').val(html);
+        }
+    </script>
+</body>
+</html>
