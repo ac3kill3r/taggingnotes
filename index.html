@@ -108,7 +108,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="csat_pitched">Csat pitched</label>
-                                            <select name="csat_pitched" class="w-35 p-1" id="csat_pitched">
+                                            <select name="csat_pitched" class="form-control-sm w-35 p-1" id="csat_pitched">
                                                 <option value="">--Select Yes/No from dropdown--</option>
                                                 <option value="Yes">Yes</option>
                                                 <option value="No">No</option>
@@ -116,13 +116,14 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="self_serv">Self-Serv</label>
-                                            <select name="self_serv" class="w-35 p-1" id="self_serv">
+                                            <select name="self_serv" class="form-control-sm w-35 p-1" id="self_serv">
                                                 <option value="">--Select Yes/No from dropdown--</option>
                                                 <option value="Yes">Yes</option>
                                                 <option value="No">No</option>
                                             </select>
                                         </div>
                                     <div class="card-footer">
+                                        <strong style="color: red;">Click submit to generate the note!!</strong>
                                         <button type="button" onclick="formSubmit();" class="btn btn-primary open" style="float:right;">Submit</button>
                                     </div>
                                     </div>
@@ -150,7 +151,7 @@
                                             <textarea class="form-control" rows="10"></textarea>
 
                                             <!--popup's close button-->
-                                            <button type="reset" onclick="window.location.reload();" class="btn btn-secondary close" style="float:right;">Close & Reset</button>
+                                            <button type="reset" onclick="window.location.reload();" class="btn btn-warning" id="close" style="float:right;">Close & Reset</button>
                                         </div>
                                     </div>   
                                 </div>
@@ -199,7 +200,7 @@
         });
     </script>
     <script>
-        $(".close, .popup").on("click", function(){
+        $("#close, .popup").on("click", function(){
         $(".popup, .popup-content").removeClass("active");
         });
     </script>
