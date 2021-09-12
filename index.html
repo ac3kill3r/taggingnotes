@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <style>
+        .popup-overlay {
+        visibility:hidden;
+        }
+
+        .popup-content {
+        visibility:hidden;
+        }
+
+        .popup-overlay.active{
+        visibility:visible;
+        }
+
+        .popup-content.active {
+        visibility:visible;
+        }
+    </style>
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -23,29 +40,25 @@
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="cx_name">Cx name </label>
-                                            <p style="color: red;">**Copy paste cx name from SA**</p>
-                                            <input name="cx_name" type="text" class="form-control" id="cx_name">
+                                            <input name="cx_name" type="text" class="form-control form-control-sm" id="cx_name"  placeholder="**Copy paste cx name from SA**">
                                         </div>
                                         <div class="form-group">
                                             <label for="cx_number">Cx number</label>
-                                            <p style="color: red;">**Copy paste cx number from SA**</p>
-                                            <input name="cx_number" type="text" class="form-control mobile" id="cx_number">
+                                            <input name="cx_number" type="text" class="form-control mobile form-control-sm" id="cx_number"  placeholder="**Copy paste cx number from SA**">
                                         </div>
                                         <div class="form-group">
                                             <label for="cx_alt_number">Cx alt number</label>
-                                            <p style="color: red;">**Copy paste Alt number if provided by cx**</p>
-                                            <input name="cx_alt_number" type="text" class="form-control mobile" id="cx_alt_number">
+                                            <input name="cx_alt_number" type="text" class="form-control mobile form-control-sm" id="cx_alt_number"  placeholder="**Copy paste Alt number if provided by cx**">
                                         </div>
                                         <div class="form-group">
-                                            <label for="issue_cx_told">Issue: cx told</label>
-                                            <p style="color: red;">**Note "cx told" will be added just select the issue from the dropdown**</p>
-                                            <select name="issue_cx_told" class="form-control" id="issue_cx_told">
+                                            <label for="issue_cx_told">Issue: cx told</label></p>
+                                            <select name="issue_cx_told" class="form-control form-control-sm" id="issue_cx_told">
                                                 
 
                                                 <!--[if you want change the value create new option tag as mention bellow]-->
                                                 
 
-                                                <option value="">--select--</option>
+                                                <option value="">--Note "cx told" will be added select the issue from dropdown--</option>
                                                 <option value="wants to know order status">STATUS CHECK</option>
                                                 <option value="facing (ISSUE  Item not as described) ,cx wants  to return">RETURN</option>
                                                 <option value="wants to know order status, order status is out for delivery">OUT FOR DELIVERY</option>
@@ -87,52 +100,36 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="resolution_cx_vo">Resolution CX VO </br></label>
-                                            <p style="color: red;">**Note "Checked and informed" will be added you just need to type the resolution in short.**</p>
-                                            <input name="resolution_cx_vo" type="text" class="form-control" id="resolution_cx_vo">
+                                            <input name="resolution_cx_vo" type="text" class="form-control form-control-sm" id="resolution_cx_vo"  placeholder="**Note ~Checked and informed~ will be added type short note**">
                                         </div>
                                         <div class="form-group">
                                             <label for="tat_sla">TAT/SLA/CPD</label>
-                                            <p style="color: red;">**Copy paste TAT/SLA/CPD shared with cx and remove the option not applicable**</p>
-                                            <input name="tat_sla" type="text" class="form-control" id="tat_sla">
+                                            <input name="tat_sla" type="text" class="form-control form-control-sm" id="tat_sla" placeholder="**Copy paste TAT/SLA/CPD shared**">
                                         </div>
                                         <div class="form-group">
                                             <label for="csat_pitched">Csat pitched</label>
-                                            <p style="color: red;">**Select Yes/No from dropdown**</p>
-                                            <select name="csat_pitched" class="form-control" id="csat_pitched">
-                                                <option value="">--select--</option>
+                                            <select name="csat_pitched" class="w-35 p-1" id="csat_pitched">
+                                                <option value="">--Select Yes/No from dropdown--</option>
                                                 <option value="Yes">Yes</option>
                                                 <option value="No">No</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="self_serv">Self-Serv</label>
-                                            <p style="color: red;">**Select Yes/No from dropdown**</p>
-                                            <select name="self_serv" class="form-control" id="self_serv">
-                                                <option value="">--select--</option>
+                                            <select name="self_serv" class="w-35 p-1" id="self_serv">
+                                                <option value="">--Select Yes/No from dropdown--</option>
                                                 <option value="Yes">Yes</option>
                                                 <option value="No">No</option>
                                             </select>
                                         </div>
-                                    </div>
                                     <div class="card-footer">
-                                        <button type="reset" class="btn btn-secondary">Reset</button>
-                                        <button type="button" onclick="formSubmit();" class="btn btn-primary">Submit</button>
-                                        <p style="color: red;">**Click Reset if you need to generate another note**</p>
+                                        <button type="button" onclick="formSubmit();" class="btn btn-primary open" style="float:right;">Submit</button>
+                                    </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card card-primary">
-                                <div class="card-header">
-                                    <h3 class="card-title">Copy the notes below</h3>
-                                </div>
-                                <div class="card-body" id="response">
-                                    <p style="color: red;">**Check the notes here first if needed edit a little.**</p>
-                                    <textarea class="form-control" rows="10"></textarea>
-                                </div>
-                            </div>
-                            
                             <ul>
                                 <li>Use this form carefully</li>
                                 <li>Please don't share this form to anyone who is not a employee</li>
@@ -141,7 +138,23 @@
                                     <br>https://discord.gg/yAr4my3ggc
                                 </li>
                             </ul>
-                        
+                            <div class="popup-overlay">
+                            <!--Creates the popup content-->
+                                 <div class="popup-content">
+                                    <div class="card card-primary">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Copy the notes below</h3>
+                                        </div>
+                                        <div class="card-body" id="response">
+                                            <p style="color: red;">**Check the notes here edit if needed.**</p>
+                                            <textarea class="form-control" rows="10"></textarea>
+
+                                            <!--popup's close button-->
+                                            <button type="reset" onclick="window.location.reload();" class="btn btn-secondary close" style="float:right;">Close & Reset</button>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
                         </div>
                         
                     </div>
@@ -174,10 +187,25 @@
         function formSubmit() {
             var html = '';
 
-            html = `Cx name: `+$('#cx_name').val()+`\nCx number: `+$('#cx_number').val()+`\n`;if ($('#cx_alt_number').val() != '') { html +=`Cx alt number: `+$('#cx_alt_number').val()+`\n`;} else {html += ``;}html +=`Issue: cx told `+$('#issue_cx_told').val()+`\nResolution: Checked and Informed `+$('#resolution_cx_vo').val()+`, TAT/SLA `+$('#tat_sla').val()+` shared.\nCsat pitched: `+$('#csat_pitched').val()+`\nSelf-Serv: `+$('#self_serv').val();
+            html = `Cx name: `+$('#cx_name').val()+`\nCx number: `+$('#cx_number').val()+`\n`;if ($('#cx_alt_number').val() != '') { html +=`Cx alt number: `+$('#cx_alt_number').val()+`\n`;} else {html += ``;}html +=`Issue: cx told `+$('#issue_cx_told').val()+`\nResolution: Checked and Informed `+$('#resolution_cx_vo').val()+`, TAT/SLA/CPD `+$('#tat_sla').val()+` shared.\nCsat pitched: `+$('#csat_pitched').val()+`\nSelf-Serv: `+$('#self_serv').val();
 
             $('#response textarea').val(html);
         }
     </script>
+    <!-- POP UP-->
+    <script>
+        $(".open").on("click", function(){
+        $(".popup, .popup-content").addClass("active");
+        });
+    </script>
+    <script>
+        $(".close, .popup").on("click", function(){
+        $(".popup, .popup-content").removeClass("active");
+        });
+    </script>
+
+
+
+
 </body>
 </html>
