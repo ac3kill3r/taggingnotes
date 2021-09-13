@@ -40,7 +40,7 @@
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="cx_name">Cx name </label>
-                                            <input name="cx_name" type="text" class="form-control form-control-sm" id="cx_name"  placeholder="**Copy paste cx name from SA**">
+                                            <input name="cx_name" type="text" class="form-control form-control-sm" id="cx_name" placeholder="**Copy paste cx name from SA**">
                                         </div>
                                         <div class="form-group">
                                             <label for="cx_number">Cx number</label>
@@ -98,14 +98,17 @@
 
                                             </select>
                                         </div>
+
                                         <div class="form-group">
-                                            <label for="resolution_cx_vo">Resolution CX VO </br></label>
+                                            <label for="resolution_cx_vo">Resolution (Type below)</label>
                                             <input name="resolution_cx_vo" type="text" class="form-control form-control-sm" id="resolution_cx_vo"  placeholder="**Note ~Checked and informed~ will be added type short note**">
                                         </div>
+
                                         <div class="form-group">
                                             <label for="tat_sla">TAT/SLA/CPD</label>
                                             <input name="tat_sla" type="text" class="form-control form-control-sm" id="tat_sla" placeholder="**Copy paste TAT/SLA/CPD shared**">
                                         </div>
+
                                         <div class="form-group">
                                             <label for="csat_pitched">Csat pitched</label>
                                             <select name="csat_pitched" class="form-control-sm w-35 p-1" id="csat_pitched">
@@ -114,14 +117,16 @@
                                                 <option value="No">No</option>
                                             </select>
                                         </div>
+                                    
                                         <div class="form-group">
-                                            <label for="self_serv">Self-Serv</label>
-                                            <select name="self_serv" class="form-control-sm w-35 p-1" id="self_serv">
+                                            <label for="self_serve">Self-Serv</label>
+                                            <select name="self_serve" class="form-control-sm w-35 p-1" id="self_serve">
                                                 <option value="">--Select Yes/No from dropdown--</option>
                                                 <option value="Yes">Yes</option>
                                                 <option value="No">No</option>
                                             </select>
                                         </div>
+
                                     <div class="card-footer">
                                         <strong style="color: red;">Click submit to generate the note!!</strong>
                                         <button type="button" onclick="formSubmit();" class="btn btn-primary open" style="float:right;">Submit</button>
@@ -130,6 +135,7 @@
                                 </form>
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <ul>
                                 <li>Use this form carefully</li>
@@ -184,7 +190,7 @@
         function formSubmit() {
             var html = '';
 
-            html = `Cx name: `+$('#cx_name').val()+`\nCx number: `+$('#cx_number').val()+`\n`;if ($('#cx_alt_number').val() != '') { html +=`Cx alt number: `+$('#cx_alt_number').val()+`\n`;} else {html += ``;}html +=`Issue: cx told `+$('#issue_cx_told').val()+`\nResolution: Checked and Informed `+$('#resolution_cx_vo').val()+`, TAT/SLA/CPD `+$('#tat_sla').val()+` shared.\nCsat pitched: `+$('#csat_pitched').val()+`\nSelf-Serv: `+$('#self_serv').val();
+            html = `Cx name: `+$('#cx_name').val()+`\nCx number: `+$('#cx_number').val()+`\n`;if ($('#cx_alt_number').val() != '') { html +=`Cx alt number: `+$('#cx_alt_number').val()+`\n`;} else {html += ``;}html +=`Issue: cx told `+$('#issue_cx_told').val()+`\nResolution: Checked and Informed `+$('#resolution_cx_vo').val()+`, TAT/SLA/CPD `+$('#tat_sla').val()+` shared.\nCsat pitched: `+$('#csat_pitched').val()+`\nSelf-Serve: `+$('#self_serve').val();
 
             $('#response textarea').val(html);
         }
@@ -200,8 +206,6 @@
         $(".popup, .popup-content").removeClass("active");
         });
     </script>
-
-
 
 
 </body>
